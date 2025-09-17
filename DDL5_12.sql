@@ -1,0 +1,53 @@
+CREATE DATABASE DDL5_12;
+USE DDL5_12; 
+
+CREATE TABLE Cursos (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR(120) NOT NULL,
+    carga_horaria INT NOT NULL,
+    modalidade VARCHAR(30) NOT NULL,
+    ativo BOOLEAN NOT NULL
+);
+
+
+CREATE TABLE Alunos (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(120) NOT NULL UNIQUE,
+    data_matricula DATETIME DEFAULT CURRENT_TIMESTAMP,
+    curso_id INT,
+    FOREIGN KEY (curso_id)
+        REFERENCES Cursos (id)
+); 
+
+CREATE TABLE Notas (
+id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+aluno_id INT,
+disciplina VARCHAR(80) NOT NULL,
+avaliacao VARCHAR(40) NOT NULL,
+nota DECIMAL(4,2) NOT NULL,
+FOREIGN KEY (aluno_id) REFERENCES Alunos(id)
+);
+
+CREATE TABLE Departamentos(
+id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+codigo CHAR(5) UNIQUE NOT NULL,
+nome VARCHAR(100) NOT NULL,
+centro_custo VARCHAR(20) NOT NULL,
+ativo BOOLEAN NOT NULL
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
