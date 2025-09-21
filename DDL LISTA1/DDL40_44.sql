@@ -59,7 +59,7 @@ CREATE TABLE Itens_Pedido (
     quantidade INT NOT NULL,
     preco_unit DECIMAL(10 , 2 ) NOT NULL,
     FOREIGN KEY (pedido_id)
-        REFERENCES Pedidos_Compras (id),
+        REFERENCES Pedidos_Compra (id),
     FOREIGN KEY (produto_id)
         REFERENCES Produtos (id)
 )
