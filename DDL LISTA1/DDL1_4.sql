@@ -36,30 +36,3 @@ CREATE TABLE Funcionarios (
     salario DECIMAL(10 , 2 ) NOT NULL
 );  
 
-INSERT INTO Clientes (nome, email, telefone)
-VALUES 
-('Maria Silva', 'maria.silva@email.com', '11987654321'),
-('João Santos', 'joao.santos@email.com', '11999887766'),
-('Ana Costa', 'ana.costa@email.com', '21988776655'),
-('Carlos Lima', 'carlos.lima@email.com', '31977665544');
-
-INSERT INTO Produtos (nome, preco, categoria, estoque)
-VALUES
-('Notebook Dell Inspiron', 3500.00, 'Informática', 10),
-('Mouse Gamer Redragon', 150.00, 'Acessórios', 50),
-('Cadeira Ergonômica', 1200.00, 'Móveis', 8),
-('Smartphone Samsung S23', 4500.00, 'Celulares', 15),
-('Fone Bluetooth JBL', 400.00, 'Áudio', 30);
-
-INSERT INTO Funcionarios (nome, cpf, cargo, salario)
-VALUES
-('Fernanda Souza', '12345678901', 'Atendente', 2500.00),
-('Rafael Oliveira', '98765432100', 'Vendedor', 2800.00),
-('Bruna Carvalho', '11122233344', 'Gerente', 5500.00); 
-
-INSERT INTO Pedidos (id_clientes, valor_total, status_pedido)
-VALUES
-(1, 3650.00, 'Finalizado'),   -- Maria
-(2, 4500.00, 'Em andamento'), -- João
-(3, 1200.00, 'Cancelado'),    -- Ana
-(4, 150.00, 'Finalizado');    -- Carlos
