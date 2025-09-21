@@ -1,0 +1,34 @@
+CREATE DATABASE DDL29_30;
+USE DDL29_30;
+
+CREATE TABLE Clientes (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR (100) NOT NULL,
+    email VARCHAR(120)  NOT NULL UNIQUE,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    telefone  VARCHAR(20)  NOT NULL
+);
+
+CREATE TABLE Pagamentos (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    cliente_id INT,
+    data_pagamento DATETIME DEFAULT CURRENT_TIMESTAMP,
+    valor DECIMAL(12 , 2 ) NOT NULL,
+    metodo VARCHAR(20) NOT NULL,
+    FOREIGN KEY (cliente_id)
+        REFERENCES Clientes (id)
+);
+
+CREATE TABLE Boletos (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    numero VARCHAR(60) UNIQUE,
+    emissao DATE NOT NULL,
+    vencimento DATE NOT NULL,
+    valor DECIMAL(12 , 2 ) NOT NULL
+);
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+CREATE DATABASE DDL34_36;
+USE DDL34_36;
+
+CREATE TABLE Usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    login VARCHAR(60) UNIQUE,
+    senha_hash VARCHAR(200),
+    email VARCHAR(120) UNIQUE,
+    ativo BOOLEAN
+);
+
+CREATE TABLE Perfis (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR(60) UNIQUE NOT NULL,
+    descricao VARCHAR(200) NOT NULL,
+    nivel INT NOT NULL,
+    ativo BOOLEAN NOT NULL
+);
+
+CREATE TABLE Logs_Acesso (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    usuario_id INT,
+    ip VARCHAR(45) NOT NULL,
+    data_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
+    acao VARCHAR(80),
+    FOREIGN KEY (usuario_id)
+        REFERENCES Usuarios (id)
+);

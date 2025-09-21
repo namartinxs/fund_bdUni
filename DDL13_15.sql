@@ -5,7 +5,7 @@ CREATE TABLE Fornecedores (
     id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
     razao_social VARCHAR(150) NOT NULL,
     cnpj CHAR(14) UNIQUE NOT NULL,
-    telefone VARCHAR(20) NOT NULL,
+    telefone VARCHAR(20) UNIQUE NOT NULL,
     email VARCHAR(120) UNIQUE NOT NULL
 );
 

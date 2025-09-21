@@ -1,0 +1,39 @@
+CREATE DATABASE DDL22_24;
+USE DDL22_24;
+
+CREATE TABLE Hoteis (
+id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+nome VARCHAR(120) NOT NULL UNIQUE,
+cnpj CHAR(14) UNIQUE NOT NULL,
+cidade VARCHAR(80) NOT NULL,
+uf CHAR(2) NOT NULL
+);
+
+CREATE TABLE Quartos (
+id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+hotel_id INT,
+numero VARCHAR(10) NOT NULL UNIQUE,
+capacidade INT NOT NULL,
+preco_diaria DECIMAL(10,2) NOT NULL,
+FOREIGN KEY (hotel_id) REFERENCES Hoteis(id)
+);
+
+CREATE TABLE Clientes (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR (100) NOT NULL,
+    email VARCHAR(120)  NOT NULL UNIQUE,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    telefone  VARCHAR(20)  NOT NULL
+);
+
+CREATE TABLE Reservas_Quarto (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    quarto_id INT,
+    cliente_id INT,
+    checkin DATE NOT NULL,
+    checkout DATE NOT NULL,
+    FOREIGN KEY (quarto_id)
+        REFERENCES Quartos (id),
+    FOREIGN KEY (cliente_id)
+        REFERENCES Clientes(id)
+);
