@@ -20,12 +20,13 @@ CREATE TABLE Clientes_Regras (
 CREATE TABLE Pedidos ( 
 	id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
     id_clientes INT,
+    id_fornecedor INT,
     data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
     valor_total DECIMAL(12,2) NOT NULL,
 	status_pedido VARCHAR(20) NOT NULL,
-    FOREIGN KEY (id_clientes) REFERENCES Clientes_Regras(id)
+    FOREIGN KEY (id_clientes) REFERENCES Clientes_Regras(id),
+    FOREIGN KEY (id_fornecedor) REFERENCES Fornecedores(id)
 );
-
 CREATE TABLE Vendas (
     id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
     pedido_id INT,
@@ -34,3 +35,5 @@ CREATE TABLE Vendas (
     metodo_pagamento VARCHAR(30),
      FOREIGN KEY (pedido_id) REFERENCES Pedidos(id)
 );
+
+
