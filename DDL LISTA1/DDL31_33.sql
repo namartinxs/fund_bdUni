@@ -36,7 +36,9 @@ CREATE TABLE Sinistros (
     data_ocorrencia DATE NOT NULL,
     descricao TEXT NOT NULL,
     valor DECIMAL(12 , 2 ) NOT NULL,
+    status_sinistro VARCHAR(20),
     FOREIGN KEY (apolice_id)
         REFERENCES Apolices (id)
 );
+
 

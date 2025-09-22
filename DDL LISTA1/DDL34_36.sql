@@ -11,10 +11,12 @@ CREATE TABLE Usuarios (
 
 CREATE TABLE Perfis (
     id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    usuario_id INT,
     nome VARCHAR(60) UNIQUE NOT NULL,
     descricao VARCHAR(200) NOT NULL,
     nivel INT NOT NULL,
-    ativo BOOLEAN NOT NULL
+    ativo BOOLEAN NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES Usuarios(id)
 );
 
 CREATE TABLE Logs_Acesso (
