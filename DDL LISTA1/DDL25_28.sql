@@ -40,7 +40,7 @@ CREATE TABLE Matriculas (
     aluno_id INT,
     turma_id INT,
     data_matricula DATETIME DEFAULT CURRENT_TIMESTAMP,
-    status VARCHAR(20) NOT NULL,
+    status_matricula VARCHAR(20) NOT NULL,
     FOREIGN KEY (aluno_id)
         REFERENCES Alunos (id),
     FOREIGN KEY (turma_id)
