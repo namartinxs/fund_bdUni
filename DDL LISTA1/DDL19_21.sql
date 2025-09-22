@@ -17,10 +17,23 @@ descricao VARCHAR(200) NOT NULL,
 site VARCHAR(150) NOT NULL
 );
 
+CREATE TABLE Clientes (
+    id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    nome VARCHAR (100) NOT NULL,
+    email VARCHAR(120)  NOT NULL UNIQUE,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    telefone  VARCHAR(20)  NOT NULL
+); 
+
 CREATE TABLE Reservas_Carro (
 id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
 carro_id INT,
 cliente_id INT,
 data_inicio DATETIME DEFAULT CURRENT_TIMESTAMP,
-data_fim DATE NOT NULL
+data_fim DATE NOT NULL,
+FOREIGN KEY (carro_id) REFERENCES Carros (id),
+FOREIGN KEY (cliente_id) REFERENCES Clientes (id)
+
 );
+
+
