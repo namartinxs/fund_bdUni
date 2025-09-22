@@ -39,3 +39,4 @@ CREATE TABLE Sinistros (
     FOREIGN KEY (apolice_id)
         REFERENCES Apolices (id)
 );
+
