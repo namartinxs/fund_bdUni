@@ -32,6 +32,7 @@ CREATE TABLE Reservas_Quarto (
     cliente_id INT,
     checkin DATE NOT NULL,
     checkout DATE NOT NULL,
+    status_reserva VARCHAR(20),
     FOREIGN KEY (quarto_id)
         REFERENCES Quartos (id),
     FOREIGN KEY (cliente_id)
