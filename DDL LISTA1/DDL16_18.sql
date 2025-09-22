@@ -22,7 +22,7 @@ id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
 medico_id INT,
 paciente_id INT,
 data_hora TIMESTAMP,
-status VARCHAR(20) NOT NULL,
+status_consulta VARCHAR(20) NOT NULL,
 FOREIGN KEY (medico_id) REFERENCES Medicos(id),
 FOREIGN KEY (paciente_id) REFERENCES Pacientes(id)
 );
