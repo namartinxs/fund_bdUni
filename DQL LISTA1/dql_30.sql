@@ -1,0 +1,3 @@
+USE DDL29_30;
+
+SELECT * FROM Boletos WHERE MONTH(vencimento) = 12

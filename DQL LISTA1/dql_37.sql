@@ -1,0 +1,3 @@
+USE DDL37_39;
+
+SELECT * FROM Eventos WHERE lotacao >500;

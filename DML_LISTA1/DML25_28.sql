@@ -13,10 +13,10 @@ WHERE nome = 'João Pereira' ;
 
 INSERT INTO Disciplinas (nome, carga_horaria, ementa, periodo)
 VALUES
-('Banco de Dados', 80, 'Modelagem de dados, SQL, normalização e administração de bancos relacionais.', '3º Semestre'),
-('Estruturas de Dados', 60, 'Listas, pilhas, filas, árvores, grafos e análise de algoritmos.', '2º Semestre'),
-('Engenharia de Software', 70, 'Ciclo de vida do software, requisitos, UML, testes e metodologias ágeis.', '4º Semestre'),
-('Redes de Computadores', 60, 'Protocolos de comunicação, TCP/IP, roteamento, segurança e redes sem fio.', '5º Semestre');
+('Banco de Dados', 80, 'Modelagem de dados, SQL, normalização e administração de bancos relacionais.', '2025/1'),
+('Estruturas de Dados', 60, 'Listas, pilhas, filas, árvores, grafos e análise de algoritmos.', '2025/2'),
+('Engenharia de Software', 70, 'Ciclo de vida do software, requisitos, UML, testes e metodologias ágeis.', '2025/4'),
+('Redes de Computadores', 60, 'Protocolos de comunicação, TCP/IP, roteamento, segurança e redes sem fio.', '2025/5');
 
 UPDATE Disciplinas  
 SET carga_horaria = 80

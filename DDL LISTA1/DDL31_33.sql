@@ -6,7 +6,8 @@ CREATE TABLE Seguradoras (
     nome VARCHAR(150) NOT NULL,
     cnpj CHAR(14) UNIQUE NOT NULL,
     telefone VARCHAR(20) NOT NULL,
-    email VARCHAR(120) UNIQUE NOT NULL
+    email VARCHAR(120) UNIQUE NOT NULL,
+    cidade VARCHAR (120) NOT NULL
 );
 
 CREATE TABLE Segurados (

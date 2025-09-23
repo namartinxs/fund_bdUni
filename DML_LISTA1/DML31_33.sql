@@ -1,9 +1,9 @@
 USE DDL31_33;
 
-INSERT INTO Seguradoras (nome,cnpj,telefone,email)
+INSERT INTO Seguradoras (nome,cnpj,telefone,email,cidade)
 VALUES
-('Seguradora Poly',12345678000190, 5199427613, 'poly@gmail.com'),
-('Seguradora Nath', 98765432000180, 519998099913, 'nathDocinhos@gmail.com');
+('Seguradora Poly',12345678000190, 5199427613, 'poly@gmail.com','Porto Alegre'),
+('Seguradora Nath', 98765432000180, 519998099913, 'nathDocinhos@gmail.com','Porto Alegre');
 
 UPDATE Seguradoras
 SET email = 'polyAna@gmail.com'

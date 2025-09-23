@@ -1,0 +1,3 @@
+USE DDL45_50;
+
+SELECT nome FROM Paises WHERE ddi =55;

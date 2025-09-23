@@ -1,8 +1,8 @@
 USE DDL19_21;
 
 SELECT 
-C.id AS Carro,
-CL.id AS Cliente,
+C.modelo AS Carro,
+CL.nome AS Cliente,
 R.data_inicio
 FROM Reservas_Carro R 
 JOIN Carros C ON R.carro_id = C.id 

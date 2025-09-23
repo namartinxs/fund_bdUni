@@ -5,7 +5,8 @@ CREATE TABLE Transportadoras (
     nome VARCHAR(120) NOT NULL,
     cnpj CHAR(14) UNIQUE NOT NULL,
     telefone VARCHAR(20) NOT NULL UNIQUE,
-    email VARCHAR(120) NOT NULL
+    email VARCHAR(120) NOT NULL,
+    regiao VARCHAR(60) NOT NULL
     );
 CREATE TABLE Fornecedores (
     id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
@@ -58,7 +59,7 @@ CREATE TABLE Itens_Pedido (
     quantidade INT NOT NULL,
     preco_unit DECIMAL(10 , 2 ) NOT NULL,
     FOREIGN KEY (pedido_id)
-        REFERENCES Pedidos_Compra (id),
+        REFERENCES Pedidos_Compras (id),
     FOREIGN KEY (produto_id)
         REFERENCES Produtos (id)
 )

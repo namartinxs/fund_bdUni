@@ -1,0 +1,3 @@
+USE DDL34_36;
+
+SELECT * FROM Perfis WHERE nivel >2;

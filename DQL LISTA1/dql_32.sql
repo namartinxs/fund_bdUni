@@ -1,0 +1,3 @@
+USE DDL31_33;
+
+SELECT * FROM Apolices WHERE premio >2000;
