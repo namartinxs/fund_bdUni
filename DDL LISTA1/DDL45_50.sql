@@ -37,6 +37,7 @@ CREATE TABLE Aeroportos (
         REFERENCES Paises (id)
 );
 
+
 CREATE TABLE Voos (
     id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
     origem_id INT,
@@ -49,8 +50,11 @@ CREATE TABLE Voos (
 
 CREATE TABLE Passageiros (
     id INT PRIMARY KEY AUTO_INCREMENT UNIQUE,
+    id_voo INT,
     nome VARCHAR(120) NOT NULL,
     documento VARCHAR(20) NOT NULL,
     nascimento DATE NOT NULL,
-    nacionalidade VARCHAR(60) NOT NULL
+    nacionalidade VARCHAR(60) NOT NULL,
+    FOREIGN KEY(id_voo) REFERENCES Voos(id)
+    
 );
