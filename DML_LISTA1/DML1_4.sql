@@ -42,3 +42,18 @@ WHERE status_pedido = 'PENDENTE';
 
 DELETE FROM Pedidos
 WHERE status_pedido = 'CANCELADO';
+
+INSERT INTO Funcionarios (nome, cpf, cargo, salario) VALUES
+('Carlos Silva', '11111111111', 'Analista', 3500.00),
+('Fernanda Souza', '22222222222', 'Gerente', 6000.00),
+('João Pereira', '33333333333', 'Analista', 3700.00),
+('Maria Oliveira', '44444444444', 'Assistente', 2200.00);
+
+
+UPDATE Funcionarios
+SET salario = salario * 1.10
+WHERE cargo = 'Analista';
+
+
+DELETE FROM Funcionarios
+WHERE id = 10;
