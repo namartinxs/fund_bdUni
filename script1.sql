@@ -130,7 +130,9 @@ CREATE TABLE Funcionario
   Constraint PK_Func  Primary Key(Cod_Func),
   Constraint CH_Func2  Check(Sexo_Func IN ('F','M')),
   Constraint CH_Func3  Check(Sal_Func >=0)
-);
+); 
+
+
 CREATE TABLE Bonus
 (
   Num_Lanc   int not null,
@@ -142,6 +144,7 @@ CREATE TABLE Bonus
   Constraint FK_Bonus Foreign Key(Cod_Func) References Funcionario(Cod_Func),
   Constraint CH_Bonus2 Check(Val_Bonus > 0)
 );
+
 
 
 CREATE TABLE Pontuacao
