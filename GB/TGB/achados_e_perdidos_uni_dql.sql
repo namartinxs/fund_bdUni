@@ -1,3 +1,10 @@
+SELECT 
+    nome,
+    descricao,
+    data_encontrado,
+    status
+FROM Item
+ORDER BY data_encontrado DESC;
 
 SELECT 
 u.id as usuario,
