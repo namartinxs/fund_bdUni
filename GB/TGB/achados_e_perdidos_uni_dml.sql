@@ -105,7 +105,7 @@ INSERT INTO Reivindicacao (id, id_item, id_reivindicador, analisado_por, data_re
 (1, 1, 2, 1, '2025-09-21 09:00:00', 'Perdi minha mochila na biblioteca', 'aprovada', '2025-09-21 10:00:00'),
 (2, 2, 3, 2, '2025-09-22 15:00:00', 'Minha carteira sumiu na portaria', 'pendente', NULL),
 (3, 5, 9, 3, '2025-09-28 14:00:00', 'Esqueci meu livro na biblioteca', 'aprovada', '2025-09-28 15:00:00'),
-(4, 6, 22, 4, '2025-09-29 09:30:00', 'Deixei meus óculos na portaria', 'rejeitada', '2025-09-30 10:00:00'),
+(4, 6, 22, 4, '2025-09-29 09:30:00', 'Deixei meus óculos na portaria', 'recusada', '2025-09-30 10:00:00'),
 (5, 9, 27, 6, '2025-10-05 11:15:00', 'Perdi minha calculadora na biblioteca', 'pendente', NULL),
 (6, 11, 18, 7, '2025-10-06 13:40:00', 'Deixei meu caderno na sala 101', 'aprovada', '2025-10-06 15:00:00'),
 (7, 12, 19, 8, '2025-10-07 09:50:00', 'Perdi meu estojo durante a aula', 'pendente', NULL),
