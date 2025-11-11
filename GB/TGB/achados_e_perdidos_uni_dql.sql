@@ -38,3 +38,25 @@ SELECT
     COUNT(*) AS total_itens
 FROM Item
 GROUP BY status;
+
+-- mostra o curso so se for aluno se nao null
+SELECT 
+    u.id AS id_usuario,
+    u.nome AS nome_usuario,
+    a.curso
+FROM Usuario u
+LEFT OUTER JOIN Aluno a
+    ON u.id = a.id_usuario;
+
+-- elimina vlrs duplicados
+
+SELECT DISTINCT curso
+FROM Aluno;
+
+SELECT 
+    id_local,
+    COUNT(*) AS total_itens
+FROM Item
+GROUP BY id_local
+HAVING COUNT(*) > 2;
+
