@@ -12,8 +12,7 @@ u.nome as nome,
 a.curso 
 FROM usuario u 
 INNER JOIN aluno a  
-ON u.id = a.id_usuario
-ORDER BY u.nome;
+ON u.id = a.id_usuario;
 
 
 SELECT 
@@ -24,3 +23,12 @@ SELECT
 FROM Item
 WHERE data_encontrado BETWEEN '2025-09-20' AND '2025-10-05'
 ORDER BY data_encontrado;
+
+SELECT 
+u.id as usuario,
+u.nome as nome,
+a.curso 
+FROM usuario u 
+INNER JOIN aluno a  
+ON u.id = a.id_usuario 
+WHERE u.nome like '%a';
