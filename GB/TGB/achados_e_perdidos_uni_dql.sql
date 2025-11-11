@@ -32,3 +32,9 @@ FROM usuario u
 INNER JOIN aluno a  
 ON u.id = a.id_usuario 
 WHERE u.nome like '%a';
+
+SELECT 
+    status,
+    COUNT(*) AS total_itens
+FROM Item
+GROUP BY status;
