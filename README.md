@@ -1,4 +1,4 @@
-# 🗄️ fund_bdUni — Fundamentos de Banco de Dados
+# 🗄️Fundamentos de Banco de Dados
 
 Repositório com exercícios, listas e scripts SQL desenvolvidos ao longo da disciplina de **Fundamentos de Banco de Dados** na faculdade. Diferente de um projeto único, este repositório funciona como um **caderno de estudos**: reúne as práticas feitas em cada aula, cobrindo desde a criação de tabelas até consultas mais elaboradas com `JOIN`, `GROUP BY` e subconsultas.
 
